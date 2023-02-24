@@ -18,6 +18,7 @@ public class DatosAlumnoForm extends javax.swing.JPanel {
     private boolean habilitar = false;
     private static DatosAlumnoForm ventana = null;
     private Alumno alumno;
+    private TablaPuntuacion tablaPuntuacion= null;
     
     /**
      * Creates new form DatosAlumnoForm
@@ -277,6 +278,7 @@ public class DatosAlumnoForm extends javax.swing.JPanel {
         String fecha = txtDia.getText()+ "/" + txtMes.getText()+ "/" + txtAño.getText();
         
         this.alumno = new Alumno(nombre, apellidos, puesto, folio, fecha);
+        this.tablaPuntuacion.setDatosAlumno(this.alumno);
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void txtNombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyReleased
