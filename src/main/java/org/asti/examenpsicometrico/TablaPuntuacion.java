@@ -156,6 +156,8 @@ public class TablaPuntuacion extends javax.swing.JPanel {
         this.folioLabel.setText(alumno.getFolio());
         this.fechaLabel.setText(alumno.getFecha());
         
+        this.alumno = alumno;
+        
     }
     
     public Alumno getAlumno(){

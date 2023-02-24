@@ -20,6 +20,7 @@ public class MensajeFinal extends javax.swing.JFrame {
 
     private double resultado;
     private Alumno alumno;
+    private TablaPuntuacion tablaPuntuacion;
     /**
      * Creates new form Evaluacion
      */
@@ -125,10 +126,12 @@ public class MensajeFinal extends javax.swing.JFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         DaoAlumno dao = new DaoAlumno();
-        Alumno alumnoo;
-        alumnoo = new Alumno("nombre", "apellidos", "puesto", "folio", "fecha");
-        alumnoo.setCalificacion(10.0);
+//        Alumno alumnoo;
+//        alumnoo = new Alumno("nombre", "apellidos", "puesto", "folio", "fecha");
+//        alumnoo.setCalificacion(10.0);
         //dao.add(this.alumno);
+        tablaPuntuacion = TablaPuntuacion.getVentana();
+        Alumno alumnoo = tablaPuntuacion.getAlumno();
         dao.add(alumnoo);
         
         //System.out.println(dao.readAll().get(1).getCalificacion());
@@ -136,7 +139,7 @@ public class MensajeFinal extends javax.swing.JFrame {
         //DatosAlumnoForm.resetVentana();
         //TablaPuntuacion.resetVentana();
         
-        System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     /**
